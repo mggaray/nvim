@@ -60,8 +60,16 @@ return require('packer').startup(function(use)
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+  }
+  use{'RRethy/nvim-base16'}
 
+  --Trouble plugin
+  use{  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+    }
+  end}
   --############################ THEMES ###########################
   use({ "ellisonleao/gruvbox.nvim" })
   use({'rose-pine/neovim', as = 'rose-pine'   })

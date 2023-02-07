@@ -1,28 +1,16 @@
 require("plugins")
--- Background Opacity 
--- vim.o.background ="dark"
 
-function theme(color)
-	color= color or "gruvbox"
-	vim.cmd.colorscheme(color)
-	vim.api.nvim_set_hl(0, "Normal", {bg="none"})
-	vim.api.nvim_set_hl(0, "NormalFloat", {bg="none"})
-end
-
-theme("gruvbox")
-
+Theme("gruvbox")
 -- SHOW LINES IN EDITOR
 vim.wo.number=true
 
 -- RELATIVE LINES
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.wildmenu = true
-
-
 --INDENT
-vim.bo.autoindent = true
-vim.bo.expandtab = true
-vim.bo.softtabstop = 2
-vim.bo.shiftwidth = 2
-vim.bo.tabstop = 2
-vim.bo.smartindent = true
+local o = vim.o
+
+o.expandtab = true
+o.smartindent = true
+o.tabstop = 2
+o.shiftwidth = 2
