@@ -4,74 +4,92 @@
 
 return require('packer').startup(function(use)
 
---######################## BASIC ################################
+	--######################## BASIC ################################
 
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
 
-  -- LSP
-  use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v1.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+	-- LSP
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v1.x',
+		requires = {
+			-- LSP Support
+			{ 'neovim/nvim-lspconfig' }, -- Required
+			{ 'williamboman/mason.nvim' }, -- Optional
+			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},         -- Required
-    {'hrsh7th/cmp-nvim-lsp'},     -- Required
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
+			-- Autocompletion
+			{ 'hrsh7th/nvim-cmp' }, -- Required
+			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
+			{ 'hrsh7th/cmp-buffer' }, -- Optional
+			{ 'hrsh7th/cmp-path' }, -- Optional
+			{ 'saadparwaiz1/cmp_luasnip' }, -- Optional
+			{ 'hrsh7th/cmp-nvim-lua' }, -- Optional
 
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},             -- Required
-    {'rafamadriz/friendly-snippets'}, -- Optional
-  }
- }
+			-- Snippets
+			{ 'L3MON4D3/LuaSnip' }, -- Required
+			{ 'rafamadriz/friendly-snippets' }, -- Optional
+		}
+	}
 
---######################## PLUGINS ################################
+	--######################## PLUGINS ################################
 
-  -- nerdtree 
-  use {'preservim/nerdtree'}
+	--treeFile
+	use {
+		'nvim-tree/nvim-tree.lua',
+		tag = 'nightly' -- optional, updated every week. (see issue #1193)
+	}
+	-- TELESCOPE
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		-- or                            , branch = '0.1.x',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
+	use { "nvim-telescope/telescope-file-browser.nvim" }
 
-  -- TELESCOPE 
-  use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
--- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+	-- PRETTIER
+	use('jose-elias-alvarez/null-ls.nvim')
+	use('MunifTanjim/prettier.nvim')
 
-  -- PRETTIER
-  use('neovim/nvim-lspconfig')
-  use('jose-elias-alvarez/null-ls.nvim')
-  use('MunifTanjim/prettier.nvim')
+	-- TREESITER
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-  -- TREESITER
-  use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
+	--DevIcons
+	use('nvim-tree/nvim-web-devicons')
 
-  --DevIcons
-  use{'ryanoasis/vim-devicons'}
+	--Lualine
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	--GPS
+	use {
+		"SmiteshP/nvim-gps",
+		requires = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("nvim-gps").setup({})
+		end
 
-  --Lualine
-  use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use{'RRethy/nvim-base16'}
+	}
 
-  --Trouble plugin
-  use{  "folke/trouble.nvim",
-  requires = "nvim-tree/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-    }
-  end}
-  --############################ THEMES ###########################
-  use({ "ellisonleao/gruvbox.nvim" })
-  use({'rose-pine/neovim', as = 'rose-pine'   })
+	--Trouble plugin
+	use { "folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("trouble").setup {}
+		end }
+
+	--Dashboard
+	use { 'glepnir/dashboard-nvim' }
+
+	--Tabs
+	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+	use { 'ojroques/nvim-bufdel' }
+	--############################ THEMES ###########################
+	use({ "ellisonleao/gruvbox.nvim" })
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use({ 'RRethy/nvim-base16' })
+	use({ 'catppuccin/vim', as = 'catppuccin' })
 
 end)

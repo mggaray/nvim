@@ -79,6 +79,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\catppuccin",
+    url = "https://github.com/catppuccin/vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -103,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -134,11 +149,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  nerdtree = {
-    loaded = true,
-    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
@@ -149,15 +159,31 @@ _G.packer_plugins = {
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-base16",
     url = "https://github.com/RRethy/nvim-base16"
   },
+  ["nvim-bufdel"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-bufdel",
+    url = "https://github.com/ojroques/nvim-bufdel"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-gps"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rnvim-gps\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-gps",
+    url = "https://github.com/SmiteshP/nvim-gps"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -165,10 +191,9 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -190,6 +215,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
@@ -200,15 +230,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-gps
+time([[Config for nvim-gps]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rnvim-gps\frequire\0", "config", "nvim-gps")
+time([[Config for nvim-gps]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
