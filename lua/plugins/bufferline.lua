@@ -29,11 +29,21 @@ bufferline.setup({
       {
         filetype = "NvimTree",
         text = "File Tree",
-        separator=true,
+        separator = true,
         padding = 0
       }
+    },
+    highlights = {
+      fill = {
+        guifg = { attribute = "fg", highlight = "#ffffff" },
+        guibg = { attribute = "bg", highlight = "#ffffff" },
+      },
+      background = {
+        guifg = { attribute = "fg", highlight = "#ffffff" },
+        guibg = { attribute = "bg", highlight = "#ffffff" },
+      },
     }
-  },
+  }
 })
 
 --Close Buffer

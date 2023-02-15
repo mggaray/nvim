@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
@@ -153,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  ["nvim-base16"] = {
-    loaded = true,
-    path = "C:\\Users\\maty1\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-base16",
-    url = "https://github.com/RRethy/nvim-base16"
   },
   ["nvim-bufdel"] = {
     loaded = true,

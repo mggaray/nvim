@@ -1,6 +1,7 @@
 require("plugins.remap")
 require('plugins.webDevIcons')
 require("plugins.lsp")
+require("plugins.saga")
 require("plugins.formatter")
 require("plugins.nvim-tree")
 require("plugins.db")

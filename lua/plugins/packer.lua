@@ -35,6 +35,17 @@ return require('packer').startup(function(use)
 
 	--######################## PLUGINS ################################
 
+	--LSPsaga
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = {
+			{ "nvim-tree/nvim-web-devicons" },
+			--Please make sure you install markdown and markdown_inline parser
+			{ "nvim-treesitter/nvim-treesitter" }
+		}
+	})
+
 	--treeFile
 	use {
 		'nvim-tree/nvim-tree.lua',
@@ -86,10 +97,10 @@ return require('packer').startup(function(use)
 	--Tabs
 	use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 	use { 'ojroques/nvim-bufdel' }
+
 	--############################ THEMES ###########################
 	use({ "ellisonleao/gruvbox.nvim" })
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
-	use({ 'RRethy/nvim-base16' })
 	use({ 'catppuccin/vim', as = 'catppuccin' })
 
 end)
