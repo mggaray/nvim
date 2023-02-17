@@ -1,12 +1,12 @@
 require("plugins")
-Theme('catppuccin_frappe')
+Theme('ayu-mirage')
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = Open_nvim_tree})
 
 -- SHOW LINES IN EDITOR
 vim.wo.number = true
 
 -- RELATIVE LINES
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.wildmenu = true
 
 --INDENT

@@ -8,6 +8,7 @@ require("plugins.db")
 require("plugins.treesiter")
 require("plugins.colors")
 require("plugins.lualine")
+require('plugins.telescope')
 require("plugins.bufferline")
 
 -- Auto update when packer installs a new plugin
@@ -18,4 +19,3 @@ vim.cmd([[
   augroup end
 ]])
 
-require('telescope').setup { defaults = { file_ignore_patterns = { "node_modules" } } }

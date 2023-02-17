@@ -3,6 +3,14 @@ require("gruvbox").setup({
   italic = false
 })
 
+require("tokyonight").setup {
+  transparent = true,
+  styles = {
+    sidebars = "transparent",
+    floats = "transparent",
+  }
+}
+
 vim.opt.termguicolors = true
 
 function Theme(color)

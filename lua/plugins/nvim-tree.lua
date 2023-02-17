@@ -24,6 +24,10 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+  },
 })
 
 function Open_nvim_tree(data)

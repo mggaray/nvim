@@ -74,15 +74,6 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  --GPS
-  use {
-    "SmiteshP:q/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-gps").setup({})
-    end
-
-  }
 
   --Trouble plugin
   use { "folke/trouble.nvim",
@@ -94,13 +85,42 @@ return require('packer').startup(function(use)
   --Dashboard
   use { 'glepnir/dashboard-nvim' }
 
+  --Bookmarks
+  use 'MattesGroeger/vim-bookmarks'
+  use 'tom-anders/telescope-vim-bookmarks.nvim'
+
   --Tabs
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use { 'ojroques/nvim-bufdel' }
+
+  --Surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*",
+    config = function()
+      require("nvim-surround").setup({
+      })
+    end
+  })
+  --AutoPair
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+  --AutoTag
+  use {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require 'nvim-treesitter.configs'.setup {
+        autotag = { enable = true, }
+      }
+    end
+  }
 
   --############################ THEMES ###########################
   use({ "ellisonleao/gruvbox.nvim" })
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use({ 'catppuccin/vim', as = 'catppuccin' })
-
+  use 'folke/tokyonight.nvim'
+  use 'shatur/neovim-ayu'
 end)
