@@ -15,6 +15,7 @@ require("nvim-tree").setup({
     mappings = {
       list = {
         { key = "u", action = "dir_up" },
+        { key = { "e", "<2-RightMouse>" }, action = "cd" },
       },
     },
   },
@@ -24,24 +25,13 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+  update_cwd = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
   },
 })
 
-function Open_nvim_tree(data)
-  require("nvim-tree.api").tree.open()
-  local directory = vim.fn.isdirectory(data.file) == 1
-  if not directory then
-    return
-  end
-
-  -- change to the directory
-  vim.cmd.cd(data.file)
-
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
 
 vim.keymap.set('n', '<C-n>', "<Cmd>:NvimTreeToggle<CR>")
+vim.g.nvim_tree_respect_buf_cwd = 1
