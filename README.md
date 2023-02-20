@@ -32,9 +32,9 @@ Prerequisites
 Install Packer
 
 
-```git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```PowerSherll git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 Clone this repository
 
-```git clone https://github.com/mggaray/nvim
+```PowerShell git clone https://github.com/mggaray/nvim
 ```
