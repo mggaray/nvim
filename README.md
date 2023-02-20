@@ -31,8 +31,10 @@ Prerequisites
 
 Install Packer
 
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
+```git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```
 Clone this repository
 
-git clone https://github.com/mggaray/nvim
+```git clone https://github.com/mggaray/nvim
+```
