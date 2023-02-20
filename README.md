@@ -20,3 +20,19 @@ Main plugins:
 ## Extended funcitonality with lsp saga
 
 ![image](https://user-images.githubusercontent.com/57115119/219977815-c708ff35-d2a7-495a-bbe8-b83a4d2b5993.png)
+
+#Instalattion
+
+## Windows
+Prerequisites
+*Git
+*Node
+*C compiler (zig is the easy one)
+
+Install Packer
+
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+
+Clone this repository
+
+git clone https://github.com/mggaray/nvim
