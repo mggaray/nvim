@@ -1,15 +1,14 @@
-require("plugins.remap")
-require('plugins.webDevIcons')
-require("plugins.lsp")
-require("plugins.saga")
-require("plugins.formatter")
-require("plugins.nvim-tree")
-require("plugins.db")
-require("plugins.treesiter")
-require("plugins.colors")
-require("plugins.lualine")
-require('plugins.telescope')
-require("plugins.bufferline")
+require("./plugins.remap")
+require("./plugins.lsp")
+require("./plugins.saga")
+require("./plugins.formatter")
+require("./plugins.nvim-tree")
+require("./plugins.db")
+require("./plugins.treesiter")
+require("./plugins.colors")
+require('./plugins.lualine')
+require('./plugins.telescope')
+require("./plugins.bufferline")
 
 -- Auto update when packer installs a new plugin
 vim.cmd([[
@@ -18,4 +17,3 @@ vim.cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
-
