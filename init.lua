@@ -1,5 +1,5 @@
 require("./plugins")
-Theme('catppuccin_frappe')
+Theme("rose-pine")
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = Open_nvim_tree})
 
 -- SHOW LINES IN EDITOR

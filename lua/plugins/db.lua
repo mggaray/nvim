@@ -15,7 +15,7 @@ end
 
 local os = getOS()
 local path = ""
-if os == "Windows" then path = "C:/Users/maty1/AppData/Local/nvim" else path = '~/.config/nvim/lua/config/init.lua' end
+if os == "Windows" then path = "C:/Users/maty1/AppData/Local/nvim" else path = '~/.config/nvim' end
 print(path)
 
 
