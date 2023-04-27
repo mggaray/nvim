@@ -1,6 +1,5 @@
 require("gruvbox").setup({
 	transparent_mode = true,
-	italic = false,
 })
 
 require("tokyonight").setup({
