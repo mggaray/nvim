@@ -1,6 +1,13 @@
 require("./plugins")
-Theme("rose-pine")
+Theme("tokyonight-night")
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = Open_nvim_tree})
+--
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 -- SHOW LINES IN EDITOR
 vim.wo.number = true
