@@ -1,5 +1,5 @@
 require("./plugins")
-Theme("tokyonight-night")
+Theme("rose-pine")
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = Open_nvim_tree})
 --
 vim.cmd([[
